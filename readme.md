@@ -42,9 +42,12 @@ template.html -- the `people` cursor passed to this tempalte will be paginated
 
 * More UI Options
 * Infinite Scolling
+* tap:i18n
 * Example App
 
 
 ### License
 
-MIT, Jan 2015, Chris Hitchcott
+MIT, Jan 2015, [Chris Hitchcott](http://hitchcott.com)
+
+[TAPevents.com](http://tapevents.com/)
