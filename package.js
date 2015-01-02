@@ -1,6 +1,6 @@
 Package.describe({
   name: 'hitchcott:paginator',
-  summary: 'Simple, client-only cursor pagination',
+  summary: 'Super simple client-only cursor pagination + UI',
   version: '0.0.1',
   git: 'https://github.com/hitchcott/meteor-paginator'
 });
@@ -19,4 +19,7 @@ Package.onUse(function(api) {
     'paginator.html',
     'paginator.coffee'
   ], 'client');
+
+  api.export('Paginator');
+
 });

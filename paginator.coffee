@@ -1,45 +1,44 @@
-class @Paginator
-  constructor: (collection, defaults={}) ->
+class Paginator
+  constructor: (collection) ->
     unless collection instanceof Mongo.Collection
-      throw new Error 'Paginator only accepts Mongo.Collections'
+      throw new Error 'Paginator only accepts Mongo.Collections at the moment'
 
     currentPageVar = new ReactiveVar(0)
-    @currentPage = currentPage = -> currentPageVar.get()
 
-    itemsPerPage = defaults.itemsPerPage || 10
-
-    @totalItems = totalItems = (query={}) -> collection.find(query).count()
-    @totalPages = -> Math.ceil(totalItems() / itemsPerPage)
+    @reset = -> currentPageVar.set(0)
 
     @find = (query={}, options={}) ->
       if options.limit || options.skip
         console.warn '`limit` and `skip` ignored due to pagination'
 
+      currentPage = -> currentPageVar.get()
+
+      itemsPerPage = options.itemsPerPage || 10
+
       options.limit = itemsPerPage
       options.skip = currentPage() * itemsPerPage
 
-      return collection.find(query, options)
+      cursor = collection.find(query, options)
 
-    # ui stuff
-    @goToPage = goToPage = (pageNumber) ->
-      # check if page exists before setting
-      currentPageVar.set(pageNumber)
+      # UI Helpers
 
-    @turnPage = (dir) -> goToPage currentPage() + dir
+      cursor.currentPage = currentPage
+      cursor.totalPages = -> Math.ceil(collection.find(query).count() / itemsPerPage)
+      cursor.goToPage = (pageNumber) ->
+        # check if page exists before setting
+        if pageNumber >= 0 and pageNumber < cursor.totalPages()
+          currentPageVar.set(pageNumber)
 
-    # @turnPage(+/- 1) = -> console.log 'next'
-    # @goToStart()
-    # @goToEnd()
-
-    return @
+      return cursor
 
 
 if Meteor.isClient
+
   Template.Paginator_UI.helpers
     currentPagei18n: -> @currentPage() + 1
 
   Template.Paginator_UI.events
-    'click .paginator-prev': -> @turnPage -1
-    'click .paginator-next': -> @turnPage 1
+    'click .paginator-prev': -> @goToPage @currentPage() - 1
+    'click .paginator-next': -> @goToPage @currentPage() + 1
 
 
