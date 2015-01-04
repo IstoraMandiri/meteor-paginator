@@ -44,9 +44,12 @@ The `Paginator_UI` tempalte is automatially hidden if the page count is 1.
 
 * More UI Options
 * Infinite Scolling
+* tap:i18n
 * Example App
 
 
 ### License
 
-MIT, Jan 2015, Chris Hitchcott
+MIT, Jan 2015, [Chris Hitchcott](http://hitchcott.com)
+
+[TAPevents.com](http://tapevents.com/)
