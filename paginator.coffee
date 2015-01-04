@@ -36,6 +36,7 @@ if Meteor.isClient
 
   Template.Paginator_UI.helpers
     currentPagei18n: -> @currentPage() + 1
+    showUI: -> @totalPages() > 1
 
   Template.Paginator_UI.events
     'click .paginator-prev': -> @goToPage @currentPage() - 1

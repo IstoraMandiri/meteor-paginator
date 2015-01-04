@@ -38,6 +38,8 @@ template.html -- the `people` cursor passed to this tempalte will be paginated
 
 ```
 
+The `Paginator_UI` tempalte is automatially hidden if the page count is 1.
+
 ### TODO
 
 * More UI Options
