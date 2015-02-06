@@ -1,7 +1,9 @@
 <template name="Paginator_UI">
   {{#if showUI}}
-    <div class="btn btn-default paginator-prev">Prev</div>
-    <span>Page {{currentPagei18n}} of {{totalPages}}</span>
-    <div class="btn btn-default paginator-next">Next</div>
+    <div class="paginator-ui">
+      <div class="btn btn-default paginator-btn paginator-prev">Prev</div>
+      <span>Page {{currentPagei18n}} of {{totalPages}}</span>
+      <div class="btn btn-default paginator-btn paginator-next">Next</div>
+    </div>
   {{/if}}
 </template>
