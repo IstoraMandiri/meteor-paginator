@@ -1,7 +1,7 @@
 class Paginator
   constructor: (collection) ->
-    unless collection instanceof Mongo.Collection
-      throw new Error 'Paginator only accepts Mongo.Collections at the moment'
+    unless collection?.find
+      throw new Error 'Paginator only accepts collections with a `find` method, at the moment'
 
     currentPageVar = new ReactiveVar(0)
 
