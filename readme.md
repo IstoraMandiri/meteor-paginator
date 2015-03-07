@@ -54,8 +54,7 @@ The `Paginator_UI` tempalte is automatially hidden if the page count is 1.
   * Go to Start
   * Go to Specific Page
 * Infinite Scolling
-* Example App
-
+* Tests
 
 ### License
 
