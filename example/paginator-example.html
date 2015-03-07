@@ -5,12 +5,13 @@
 <body>
   <div class="container">
     <h1><a href="https://github.com/hitchcott/meteor-paginator" target="_blank">hitchcott:paginator</a> demo</h1>
+    {{> i18n_buttons}}
+    <hr>
     {{> test}}
   </div>
 </body>
 
 <template name="test">
-    <hr>
     <!-- optional reset butotn -->
     {{#if showResetButton}}
       <div class="btn btn-danger pull-right reset">Reset to Page 1</div>

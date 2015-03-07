@@ -1,0 +1,5 @@
+{
+  "previous": "Previous",
+  "next": "Next",
+  "page_x_of_y": "Page __currentPage__ of __totalPages__"
+}

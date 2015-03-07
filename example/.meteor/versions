@@ -1,3 +1,5 @@
+aldeed:simple-schema@1.3.0
+amplify@1.0.0
 application-configuration@1.0.4
 autopublish@1.0.2
 autoupdate@1.1.5
@@ -7,6 +9,7 @@ blaze@2.0.4
 blaze-tools@1.0.2
 boilerplate-generator@1.0.2
 callback-hook@1.0.2
+cfs:http-methods@0.0.27
 check@1.0.4
 coffeescript@1.0.5
 ddp@1.0.14
@@ -15,7 +18,7 @@ ejson@1.0.5
 fastclick@1.0.2
 follower-livedata@1.0.3
 geojson-utils@1.0.2
-hitchcott:paginator@0.0.3
+hitchcott:paginator@0.1.0
 html-tools@1.0.3
 htmljs@1.0.3
 http@1.0.10
@@ -43,6 +46,8 @@ routepolicy@1.0.4
 session@1.0.5
 spacebars@1.0.5
 spacebars-compiler@1.0.4
+tap:i18n@1.4.1
+tap:i18n-ui@0.5.0
 templating@1.0.11
 tracker@1.0.5
 twbs:bootstrap@3.3.2

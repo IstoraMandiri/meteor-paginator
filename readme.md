@@ -9,6 +9,8 @@ Meteor apps can become slow when rendering many items in an `{{#each}}` loop. Mu
 
 I needed a no-frills, client-only pagination solution that accepted existing collections.
 
+`hitchcott:paginator` uses [tap:i18n](http://github.com/TAPevents/tap-i18n) for internationalization.
+
 ### Usage
 
 Check the `/example` for a demo meteor app.
@@ -52,7 +54,6 @@ The `Paginator_UI` tempalte is automatially hidden if the page count is 1.
   * Go to Start
   * Go to Specific Page
 * Infinite Scolling
-* tap:i18n
 * Example App
 
 

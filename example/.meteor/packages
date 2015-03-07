@@ -10,3 +10,5 @@ insecure
 coffeescript
 twbs:bootstrap
 hitchcott:paginator
+tap:i18n
+tap:i18n-ui
