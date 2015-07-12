@@ -38,7 +38,8 @@ Package.onUse(function(api) {
     "i18n/zh.i18n.json",
     "i18n/zh-CN.i18n.json",
     "i18n/pt.i18n.json",
-    "i18n/pt-BR.i18n.json"
+    "i18n/pt-BR.i18n.json",
+    "i18n/es.i18n.json"
   ], ["client", "server"]);
 
 
