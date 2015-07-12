@@ -54,6 +54,7 @@ The `Paginator_UI` tempalte is automatially hidden if the page count is 1.
 * Swedish
 * Chinese
 * Portuguese
+* Spanish
 
 Pull Requests are welcome!
 
