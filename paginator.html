@@ -1,9 +1,39 @@
 <template name="Paginator_UI">
-  {{#if showUI}}
-    <div class="paginator-ui">
-      <div class="btn btn-default paginator-btn paginator-prev" disabled={{isCurrentPageFirst}}>{{_ "previous"}}</div>
-      <span>{{_ "page_x_of_y" currentPage=currentPagei18n totalPages=totalPages}}</span>
-      <div class="btn btn-default paginator-btn paginator-next" disabled={{isCurrentPageLast}}>{{_ "next"}}</div>
-    </div>
-  {{/if}}
+    {{#if showUI}}
+        <div class="paginator-ui">
+            <div class="btn btn-default paginator-btn paginator-prev"
+                 disabled={{isCurrentPageFirst}}>{{_ "previous"}}</div>
+            <span>{{_ "page_x_of_y" currentPage=currentPagei18n totalPages=totalPages}}</span>
+
+            <div class="btn btn-default paginator-btn paginator-next" disabled={{isCurrentPageLast}}>{{_ "next"}}</div>
+        </div>
+    {{/if}}
+</template>
+
+<template name="bootstrap_paginator">
+    {{#if showUI}}
+        <nav>
+            <ul class="pagination">
+                <li class="{{disablePrev}}">
+                    <a href="#" aria-label="Previous" class="paginator-prev">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {{#each pages}}
+                    {{>page}}
+                {{/each}}
+                <li class="{{disableNext}}">
+                    <a href="#" aria-label="Next" class="paginator-next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    {{/if}}
+</template>
+
+<template name="page">
+    {{#if show}}
+        <li class="{{activeClass}}"><a href="#" data-page="{{num}}">{{displayNum}}</a></li>
+    {{/if}}
 </template>
