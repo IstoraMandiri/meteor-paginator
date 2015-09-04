@@ -1,7 +1,7 @@
 Package.describe({
   name: 'hitchcott:paginator',
   summary: 'Super simple client-only cursor pagination + UI',
-  version: '0.2.2',
+  version: '0.2.3',
   git: 'https://github.com/hitchcott/meteor-paginator'
 });
 
@@ -33,13 +33,14 @@ Package.onUse(function(api) {
   // tap:i18n locales
   api.addFiles([
     "i18n/en.i18n.json",
+    "i18n/es.i18n.json",
     "i18n/ja.i18n.json",
-    "i18n/sv.i18n.json",
-    "i18n/zh.i18n.json",
-    "i18n/zh-CN.i18n.json",
-    "i18n/pt.i18n.json",
+    "i18n/pl.i18n.json",
     "i18n/pt-BR.i18n.json",
-    "i18n/es.i18n.json"
+    "i18n/pt.i18n.json",
+    "i18n/sv.i18n.json",
+    "i18n/zh-CN.i18n.json",
+    "i18n/zh.i18n.json"
   ], ["client", "server"]);
 
 
