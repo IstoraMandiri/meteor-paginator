@@ -9,6 +9,8 @@ Meteor apps can become slow when rendering many items in an `{{#each}}` loop. Mu
 
 I needed a no-frills, client-only pagination solution that accepted existing collections.
 
+Paginator currently only supports Bootstrap 3. Use `twbs:bootstrap` package to make the UI look nice. If you'd like to see more frameworks added, please submit an issue or a pull request.
+
 ### Usage
 
 Check the `/example` for a demo meteor app.
