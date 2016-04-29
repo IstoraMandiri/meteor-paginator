@@ -32,6 +32,7 @@ Package.onUse(function(api) {
 
   // tap:i18n locales
   api.addFiles([
+    "i18n/el.i18n.json",
     "i18n/en.i18n.json",
     "i18n/es.i18n.json",
     "i18n/ja.i18n.json",
